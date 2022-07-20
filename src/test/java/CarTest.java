@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import car.Car;
+import Vehicle.Car;
 
 public class CarTest {
 
@@ -8,15 +8,15 @@ public class CarTest {
     void carTest() {
         Car car = new Car();
         car.doorsAreOpen();
-        car.carIsTurnedOn();
-        car.carIsSafe();
+        car.isTurnedOn();
+        car.isSafe();
         car.carIsMoving();
         System.out.println(car.carIsMoving());
 
         Car bmw = new Car("BMW");
         bmw.doorAreClose();
-        bmw.carIsTurnedOn();
-        bmw.carIsSafe();
+        bmw.isTurnedOn();
+        bmw.isSafe();
         bmw.carIsMoving();
     }
 
@@ -24,13 +24,13 @@ public class CarTest {
     void moving() {
         Car benz = new Car("Benz");
 
-        benz.carIsTurnedOn();
-        benz.carIsSafe();
+        benz.isTurnedOn();
+        benz.isSafe();
         boolean benzMoving = benz.carIsMoving();
         Assertions.assertTrue(benzMoving);
 
         Car fiat = new Car("Fiat");
-        fiat.carIsSafe();
+        fiat.isSafe();
         boolean volvoMoving = fiat.carIsMoving();
         Assertions.assertFalse(fiat.carIsMoving());
     }
